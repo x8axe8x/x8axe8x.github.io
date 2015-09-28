@@ -7,6 +7,7 @@ body {
   color: #5a5a5a;
 }
 
+/* SVG doesn't seem to resize correctly on IE...*/
 .svg-content { 
   display: inline-block;
   position: absolute;
@@ -89,6 +90,8 @@ body {
   left: 50%;
   /*margin-right: -50%;*/
   transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%); /* IE 9 */
+  -webkit-transform: translate(-50%, -50%); /* Safari */
   
   max-height: 150%;
   max-width: 100%;
